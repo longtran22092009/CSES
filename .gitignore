@@ -1,7 +1,0 @@
-# Ignore compiled files
-*.inp
-*.out
-*.exe
-
-# Ignore build folders
-.vscode/
