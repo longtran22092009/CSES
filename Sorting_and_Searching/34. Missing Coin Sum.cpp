@@ -37,7 +37,7 @@ void solve() {
     for (auto &x : a) cin >> x;
     sort(all(a));
 
-    int ans = 1;
+    ll ans = 1;
     for (auto &x : a) {
         if (x > ans) break;
         ans += x;
