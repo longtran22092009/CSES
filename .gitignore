@@ -1,0 +1,7 @@
+# Ignore compiled files
+*.in
+*.out
+*.exe
+
+# Ignore build folders
+.vscode/
