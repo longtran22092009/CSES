@@ -36,10 +36,18 @@ void solve() {
     vector <int> a(n);
     for (auto &x : a) cin >> x;
 
-    int ans = 0, l = 0;
+    ll ans = 0, l = 0;
+    map <int, int> f;
     FOR(r, 0, n-1) {
-        
+        f[a[r]]++;
+        while (l <= r && f[a[r]] > 1) {
+            if (--f[a[l]] == 0) f.erase(a[l]);
+            ++l;
+        }
+        ans += r - l + 1;
     }
+
+    cout << ans << endl;
 }
 
 signed main() {
