@@ -40,14 +40,15 @@ void solve() {
     }
     sort(all(a));
 
-    FOR(i, 0, n-3) {
-        int l = i+1, r = n-1;
+    FOR(i, 0, n-4) FOR(j, i+1, n-3) {
+        int l = j+1, r = n-1;
         while (l < r) {
             int mid = (l + r) / 2;
-            int sum = a[i].fi + a[l].fi + a[r].fi;
+            int sum = a[i].fi + a[j].fi + a[l].fi + a[r].fi;
 
             if (sum == t) {
-                cout << a[i].se << " " << a[l].se << " " << a[r].se << endl;
+                cout << a[i].se << " " << a[j].se << " ";
+                cout << a[l].se << " " << a[r].se << endl;
                 return;
             }
             else if (sum > t) --r;
