@@ -31,7 +31,7 @@ const ll MOD = (ll) 1e9+7;
 const int mxN = 100005;
 
 void solve() {
-    cout << 1 << endl;
+    
 }
 
 signed main() {
