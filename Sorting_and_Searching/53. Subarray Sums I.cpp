@@ -32,7 +32,7 @@ const int mxN = 100005;
 
 void solve() {
     int n, tgt; cin >> n >> tgt;
-    
+
     vector <int> a(n);
     for (auto &x : a) cin >> x;
 
