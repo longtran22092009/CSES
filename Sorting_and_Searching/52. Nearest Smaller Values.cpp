@@ -36,7 +36,7 @@ void solve() {
  
     vector <int> a(n);
     FOR(i, 0, n-1) cin >> a[i];
- 
+
     stack<int> q;
     for (int i = 0; i < n; i++) {
         while (!q.empty() && a[q.top()] >= a[i]) q.pop();
