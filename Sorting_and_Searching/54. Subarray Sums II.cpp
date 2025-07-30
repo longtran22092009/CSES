@@ -36,7 +36,6 @@ void solve() {
     vector <int> a(n);
     for (auto &x : a) cin >> x;
 
-
 }
 
 signed main() {
