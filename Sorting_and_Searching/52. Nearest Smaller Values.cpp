@@ -6,11 +6,13 @@ using namespace std;
 #define ON(x, i) ((x) | MASK(i))
 #define OFF(x, i) ((x) & ~MASK(i))
 #define LASTBIT(mask) ((mask) & -(mask))
+#define SUBMASK(sub, mask) for (int sub = (mask); sub >= 1; sub = (sub - 1) & (mask))
 //====== OTHER ======//
 #define fi first
 #define se second
 #define ll long long
 #define endl '\n'
+#define sz(x) (int)size(x)
 #define all(x) begin(x), end(x)
 #define mod(x, k) ((((x) % (k)) + (k)) % (k))
 #define compress(c) sort(all(c)); c.erase(unique(all(c)), c.end());
@@ -22,32 +24,28 @@ using namespace std;
 #define OUT "A.out"
 #define DEBUG "debug.out"
 //==================//
-
+ 
 const int INF = (int) 1e9+5;
 const ll LINF = (ll) 1e18;
 const ll MOD = (ll) 1e9+7;
-const int mxN = 200005;
-
-int n;
-ll a[mxN];
-int res[mxN];
-
+const int mxN = 100005;
+ 
+ 
 void solve() {
-    cin >> n;
-    FOR(i, 1, n) cin >> a[i];
-
-    stack<int> st;
-    FOR(i, 1, n) {
-        while (!st.empty() && a[st.top()] >= a[i]) st.pop();
-        if (st.empty()) res[i] = 0;
-        else res[i] = st.top();
-        st.push(i);
+    int n; cin >> n;
+ 
+    vector <int> a(n);
+    FOR(i, 0, n-1) cin >> a[i];
+ 
+    stack<int> q;
+    for (int i = 0; i < n; i++) {
+        while (!q.empty() && a[q.top()] >= a[i]) q.pop();
+        if (q.empty()) cout << 0 << " ";
+        else cout << q.top() + 1 << " ";
+        q.push(i);
     }
-
-    FOR(i, 1, n) cout << res[i] << ' ';
-    cout << endl;
 }
-
+ 
 signed main() {
     if (fopen(IN, "r")) {
         freopen(IN, "r", stdin);
@@ -55,7 +53,7 @@ signed main() {
         freopen(DEBUG, "w", stderr);
     }
     Longgggg
-
+ 
     ll t = 1;
     // cin >> t;
     while (t--) solve();
