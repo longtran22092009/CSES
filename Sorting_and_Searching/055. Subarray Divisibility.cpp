@@ -31,21 +31,19 @@ const ll MOD = (ll) 1e9+7;
 const int mxN = 100005;
 
 void solve() {
-    int n, tgt; cin >> n >> tgt;
+    int n; cin >> n;
 
     vector <int> a(n);
     for (auto &x : a) cin >> x;
 
-    map <ll, int> f;
-    f[0] = 1;
-    ll ans = 0, sum = 0;
-
+    map <int, int> rem;
+    rem[0] = 1;
+    ll sum = 0, ans = 0;
     FOR(i, 0, n-1) {
         sum += a[i];
-        ans += f[sum - tgt]; // pre[r] - pre[l-1]
-        f[sum]++;
+        int x = sum % n;
+        ans += rem[x]++;
     }
-
     cout << ans << endl;
 }
 
