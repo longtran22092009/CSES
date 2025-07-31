@@ -44,6 +44,7 @@ void solve() {
         int x = sum % n;
         ans += rem[x]++;
     }
+    
     cout << ans << endl;
 }
 
