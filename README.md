@@ -2,8 +2,8 @@
 
 ## 🔹 Introductory Problems
 
-| ID   | Problem Name | File Link |
-|------|--------------|-----------|
+| ID  | Problem Name | File Link |
+|-----|--------------|-----------|
 | 001 |  Weird Algorithm | [001. Weird Algorithm.cpp](Introductory_Problems/001.%20Weird%20Algorithm.cpp) |
 | 002 |  Missing Number | [002. Missing Number.cpp](Introductory_Problems/002.%20Missing%20Number.cpp) |
 | 003 |  Repetitions | [003. Repetitions.cpp](Introductory_Problems/003.%20Repetitions.cpp) |
@@ -31,8 +31,8 @@
 
 ## 🔹 Sorting and Searching
 
-| ID   | Problem Name | File Link |
-|------|--------------|-----------|
+| ID  | Problem Name | File Link |
+|-----|--------------|-----------|
 | 025 |  Distinct Numbers | [025. Distinct Numbers.cpp](Sorting_and_Searching/025.%20Distinct%20Numbers.cpp) |
 | 026 |  Apartments | [026. Apartments.cpp](Sorting_and_Searching/026.%20Apartments.cpp) |
 | 027 |  Ferris Wheel | [027. Ferris Wheel.cpp](Sorting_and_Searching/027.%20Ferris%20Wheel.cpp) |
