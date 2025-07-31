@@ -29,11 +29,6 @@
 | 023 |  String Reorder | ??? | [023. String Reorder.cpp](Introductory_Problems/023.%20String%20Reorder.cpp) |
 | 024 |  Grid Path Description | ??? | [024. Grid Path Description.cpp](Introductory_Problems/024.%20Grid%20Path%20Description.cpp) |
 
-## 🔹 Others
-
-| ID   | Problem Name | Estimated Rating | File Link |
-|------|--------------|------------------|-----------|
-
 ## 🔹 Sorting and Searching
 
 | ID   | Problem Name | Estimated Rating | File Link |
