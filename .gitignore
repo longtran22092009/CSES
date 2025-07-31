@@ -2,7 +2,6 @@
 *.in
 *.out
 *.exe
-Organize.sh
 
 # Ignore build folders
 .vscode/
