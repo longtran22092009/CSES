@@ -31,9 +31,24 @@ const ll MOD = (ll) 1e9+7;
 const int mxN = 100005;
 
 void solve() {
-    int n; cin >> n;
+    int n, k; cin >> n >> k;
     
     vector <int> a(n);
+    for (auto &x : a) cin >> x;
+
+    map <int, int> f;
+    int l = 0;
+    ll ans = 0;
+    FOR(r, 0, n-1) {
+        f[a[r]]++;
+        while (l <= r && sz(f) > k) {
+            if (--f[a[l]] == 0) f.erase(a[l]);
+            ++l;
+        }
+        ans += r - l + 1;
+    }
+
+    cout << ans << endl;
 }
 
 signed main() {
