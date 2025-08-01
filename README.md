@@ -65,4 +65,12 @@
 | 054 |  Subarray Sums II | [054. Subarray Sums II.cpp](Sorting%20and%20Searching/054.%20Subarray%20Sums%20II.cpp) |
 | 055 |  Subarray Divisibility | [055. Subarray Divisibility.cpp](Sorting%20and%20Searching/055.%20Subarray%20Divisibility.cpp) |
 | 056 |  Distinct Values Subarrays II | [056. Distinct Values Subarrays II.cpp](Sorting%20and%20Searching/056.%20Distinct%20Values%20Subarrays%20II.cpp) |
+| 057 |  Array Division | [057. Array Division.cpp](Sorting%20and%20Searching/057.%20Array%20Division.cpp) |
+| 058 |  Movie Festival II | [058. Movie Festival II.cpp](Sorting%20and%20Searching/058.%20Movie%20Festival%20II.cpp) |
+| 059 |  Maximum Subarray Sum II | [059. Maximum Subarray Sum II.cpp](Sorting%20and%20Searching/059.%20Maximum%20Subarray%20Sum%20II.cpp) |
 
+## 🔹 Dynamic Programming
+
+| ID  | Problem Name | File Link |
+|-----|--------------|-----------|
+| 060 |  Dice Combinations | [060. Dice Combinations.cpp](Dynamic%20Programming/060.%20Dice%20Combinations.cpp) |
