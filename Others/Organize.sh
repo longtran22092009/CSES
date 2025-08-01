@@ -12,14 +12,18 @@ cd "$codepath" || exit 1
 
 # === STEP 1: RENAME ALL FILES TO 3-DIGIT FORMAT ===
 echo "🔄 Renaming all .cpp files to 3-digit format..."
-for file in **/*.cpp; do
+
+# Sort files by numeric ID
+mapfile -t files < <(find . -type f -name '*.cpp' | sort)
+
+for file in "${files[@]}"; do
     base=$(basename "$file")
     dir=$(dirname "$file")
 
     if [[ "$base" =~ ^([0-9]+)\.(.*\.cpp)$ ]]; then
         id="${BASH_REMATCH[1]}"
         name="${BASH_REMATCH[2]}"
-        newid=$(printf "%03d" "$id")
+        newid=$(printf "%03d" "$((10#$id))")
         newname="${newid}.${name}"
 
         if [[ "$base" != "$newname" ]]; then
@@ -27,7 +31,9 @@ for file in **/*.cpp; do
         fi
     fi
 done
+
 echo "✅ Renaming complete."
+
 
 # === STEP 2: OPERATION CHOICE ===
 echo "Choose an operation:"
