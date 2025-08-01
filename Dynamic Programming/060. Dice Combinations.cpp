@@ -28,10 +28,18 @@ using namespace std;
 const int INF = (int) 1e9+5;
 const ll LINF = (ll) 1e18;
 const ll MOD = (ll) 1e9+7;
-const int mxN = 100005;
+const int mxN = 1000005;
 
 void solve() {
-    
+    int n; cin >> n;
+
+    vector <ll> dp(mxN, 0);
+    dp[0] = 1;
+
+    FOR(i, 1, mxN) FOR(c, 1, 6) 
+        if (i-c >= 0) dp[i] = mod(dp[i] + dp[i-c], MOD);
+        
+    cout << dp[n] << endl;
 }
 
 signed main() {
