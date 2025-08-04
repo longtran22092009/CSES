@@ -1,21 +1,5 @@
 # 🗂️ Problem List
 
-## 🔹 Dynamic Programming
-
-| ID  | Problem Name | File Link |
-|-----|--------------|-----------|
-| 060 |  Dice Combinations | [060. Dice Combinations.cpp](Dynamic%20Programming/060.%20Dice%20Combinations.cpp) |
-| 061 |  Minimizing Coins | [061. Minimizing Coins.cpp](Dynamic%20Programming/061.%20Minimizing%20Coins.cpp) |
-| 062 |  Coin Combinations I | [062. Coin Combinations I.cpp](Dynamic%20Programming/062.%20Coin%20Combinations%20I.cpp) |
-| 063 |  Coin Combinations II | [063. Coin Combinations II.cpp](Dynamic%20Programming/063.%20Coin%20Combinations%20II.cpp) |
-| 064 |  Removing Digits | [064. Removing Digits.cpp](Dynamic%20Programming/064.%20Removing%20Digits.cpp) |
-| 065 |  Grid Paths I | [065. Grid Paths I.cpp](Dynamic%20Programming/065.%20Grid%20Paths%20I.cpp) |
-| 066 |  Book Shop | [066. Book Shop.cpp](Dynamic%20Programming/066.%20Book%20Shop.cpp) |
-| 067 |  Array Description | [067. Array Description.cpp](Dynamic%20Programming/067.%20Array%20Description.cpp) |
-| 068 |  Counting Towers | [068. Counting Towers.cpp](Dynamic%20Programming/068.%20Counting%20Towers.cpp) |
-| 069 |  Edit Distance | [069. Edit Distance.cpp](Dynamic%20Programming/069.%20Edit%20Distance.cpp) |
-| 070 |  Longest Common Subsequence | [070. Longest Common Subsequence.cpp](Dynamic%20Programming/070.%20Longest%20Common%20Subsequence.cpp) |
-
 ## 🔹 Introductory Problems
 
 | ID  | Problem Name | File Link |
@@ -84,4 +68,32 @@
 | 057 |  Array Division | [057. Array Division.cpp](Sorting%20and%20Searching/057.%20Array%20Division.cpp) |
 | 058 |  Movie Festival II | [058. Movie Festival II.cpp](Sorting%20and%20Searching/058.%20Movie%20Festival%20II.cpp) |
 | 059 |  Maximum Subarray Sum II | [059. Maximum Subarray Sum II.cpp](Sorting%20and%20Searching/059.%20Maximum%20Subarray%20Sum%20II.cpp) |
+
+## 🔹 Dynamic Programming
+
+| ID  | Problem Name | File Link |
+|-----|--------------|-----------|
+| 060 |  Dice Combinations | [060. Dice Combinations.cpp](Dynamic%20Programming/060.%20Dice%20Combinations.cpp) |
+| 061 |  Minimizing Coins | [061. Minimizing Coins.cpp](Dynamic%20Programming/061.%20Minimizing%20Coins.cpp) |
+| 062 |  Coin Combinations I | [062. Coin Combinations I.cpp](Dynamic%20Programming/062.%20Coin%20Combinations%20I.cpp) |
+| 063 |  Coin Combinations II | [063. Coin Combinations II.cpp](Dynamic%20Programming/063.%20Coin%20Combinations%20II.cpp) |
+| 064 |  Removing Digits | [064. Removing Digits.cpp](Dynamic%20Programming/064.%20Removing%20Digits.cpp) |
+| 065 |  Grid Paths I | [065. Grid Paths I.cpp](Dynamic%20Programming/065.%20Grid%20Paths%20I.cpp) |
+| 066 |  Book Shop | [066. Book Shop.cpp](Dynamic%20Programming/066.%20Book%20Shop.cpp) |
+| 067 |  Array Description | [067. Array Description.cpp](Dynamic%20Programming/067.%20Array%20Description.cpp) |
+| 068 |  Counting Towers | [068. Counting Towers.cpp](Dynamic%20Programming/068.%20Counting%20Towers.cpp) |
+| 069 |  Edit Distance | [069. Edit Distance.cpp](Dynamic%20Programming/069.%20Edit%20Distance.cpp) |
+| 070 |  Longest Common Subsequence | [070. Longest Common Subsequence.cpp](Dynamic%20Programming/070.%20Longest%20Common%20Subsequence.cpp) |
+| 071 |  Rectangle Cutting | [071. Rectangle Cutting.cpp](Dynamic%20Programming/071.%20Rectangle%20Cutting.cpp) |
+| 072 |  Minimal Grid Path | [072. Minimal Grid Path.cpp](Dynamic%20Programming/072.%20Minimal%20Grid%20Path.cpp) |
+| 073 |  Money Sums | [073. Money Sums.cpp](Dynamic%20Programming/073.%20Money%20Sums.cpp) |
+| 074 |  Removal Game | [074. Removal Game.cpp](Dynamic%20Programming/074.%20Removal%20Game.cpp) |
+| 075 |  Two Sets II | [075. Two Sets II.cpp](Dynamic%20Programming/075.%20Two%20Sets%20II.cpp) |
+| 076 |  Mountain Range | [076. Mountain Range.cpp](Dynamic%20Programming/076.%20Mountain%20Range.cpp) |
+| 077 |  Increasing Subsequence | [077. Increasing Subsequence.cpp](Dynamic%20Programming/077.%20Increasing%20Subsequence.cpp) |
+| 078 |  Projects | [078. Projects.cpp](Dynamic%20Programming/078.%20Projects.cpp) |
+| 079 |  Elevator Rides | [079. Elevator Rides.cpp](Dynamic%20Programming/079.%20Elevator%20Rides.cpp) |
+| 080 |  Counting Tilings | [080. Counting Tilings.cpp](Dynamic%20Programming/080.%20Counting%20Tilings.cpp) |
+| 081 |  Counting Numbers | [081. Counting Numbers.cpp](Dynamic%20Programming/081.%20Counting%20Numbers.cpp) |
+| 082 |  Increasing Subsequence II | [082. Increasing Subsequence II.cpp](Dynamic%20Programming/082.%20Increasing%20Subsequence%20II.cpp) |
 
