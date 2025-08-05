@@ -45,7 +45,7 @@ void bellmanFord() {
         for (auto &e : edges) {
             int u = e.u, v = e.v;
             ll w = e.w;
-            if (d[u] != LINF && d[v] > d[u] + w) {
+            if (d[v] > d[u] + w) {
                 par[v] = u;
                 d[v] = d[u] + w;
             }
@@ -58,7 +58,7 @@ bool findNegCycle() {
     for (auto &e :edges) {
         int u = e.u, v = e.v;
         ll w = e.w;
-        if (d[u] != LINF && d[v] > d[u] + w) {
+        if (d[v] > d[u] + w) {
             par[v] = u;
             negStart = v;
             break;
