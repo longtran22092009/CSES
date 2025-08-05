@@ -1,0 +1,71 @@
+#include <bits/stdc++.h>
+using namespace std;
+//====== BITWISE ======//
+#define MASK(i) (1LL << (i))
+#define BIT(x, i) (1LL & ((x) >> (i)))
+#define ON(x, i) ((x) | MASK(i))
+#define OFF(x, i) ((x) & ~MASK(i))
+#define LASTBIT(mask) ((mask) & -(mask))
+#define SUBMASK(sub, mask) for (int sub = (mask); sub >= 1; sub = (sub - 1) & (mask))
+//====== OTHER ======//
+#define fi first
+#define se second
+#define ll long long
+#define endl '\n'
+#define sz(x) (int)size(x)
+#define all(x) begin(x), end(x)
+#define mod(x, k) ((((x) % (k)) + (k)) % (k))
+#define compress(c) sort(all(c)); c.erase(unique(all(c)), c.end());
+#define Longgggg ios_base::sync_with_stdio(0); cin.tie(0);
+#define FOR(i, a, b) for (int i = (a); i <= (b); ++i)
+#define FORD(i, a, b) for (int i = (a); i >= (b); --i)
+//====== FILE ======//
+#define IN "A.in"
+#define OUT "A.out"
+#define DEBUG "debug.out"
+//==================//
+
+const int INF = (int) 1e9+5;
+const ll LINF = (ll) 1e18;
+const ll MOD = (ll) 1e9+7;
+const int mxN = 505;
+
+int n, m, Q;
+ll d[mxN][mxN];
+
+void Floyd() {
+    FOR(i, 1, n) d[i][i] = 0;
+    FOR(k, 1, n) FOR(u, 1, n) FOR(v, 1, n)
+        d[u][v] = min(d[u][v], d[u][k] + d[k][v]);
+}
+
+void solve() {
+    cin >> n >> m >> Q;
+
+    fill(&d[0][0], &d[0][0] + mxN * mxN, LINF);
+    FOR(i, 1, m) {
+        int u, v, w; cin >> u >> v >> w;
+        d[u][v] = d[v][u] = min(d[u][v], 1LL * w);
+    }
+    
+    Floyd();
+    while (Q--) {
+        int u, v; cin >> u >> v;
+        if (d[u][v] == LINF) cout << "-1\n";
+        else cout << d[u][v] << endl;
+    }
+}
+
+signed main() {
+    if (fopen(IN, "r")) {
+        freopen(IN, "r", stdin);
+        freopen(OUT, "w", stdout);
+        freopen(DEBUG, "w", stderr);
+    }
+    Longgggg
+
+    ll t = 1;
+    // cin >> t;
+    while (t--) solve();
+    return 0;
+}
