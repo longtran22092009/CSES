@@ -97,3 +97,25 @@
 | 081 |  Counting Numbers | [081. Counting Numbers.cpp](Dynamic%20Programming/081.%20Counting%20Numbers.cpp) |
 | 082 |  Increasing Subsequence II | [082. Increasing Subsequence II.cpp](Dynamic%20Programming/082.%20Increasing%20Subsequence%20II.cpp) |
 
+## 🔹 Graph Algorithms
+
+| ID  | Problem Name | File Link |
+|-----|--------------|-----------|
+| 083 |  Counting Rooms | [083. Counting Rooms.cpp](Graph%20Algorithms/083.%20Counting%20Rooms.cpp) |
+| 084 |  Labyrinth | [084. Labyrinth.cpp](Graph%20Algorithms/084.%20Labyrinth.cpp) |
+| 085 |  Building Roads | [085. Building Roads.cpp](Graph%20Algorithms/085.%20Building%20Roads.cpp) |
+| 086 |  Message Route | [086. Message Route.cpp](Graph%20Algorithms/086.%20Message%20Route.cpp) |
+| 087 |  Building Teams | [087. Building Teams.cpp](Graph%20Algorithms/087.%20Building%20Teams.cpp) |
+| 088 |  Round Trip | [088. Round Trip.cpp](Graph%20Algorithms/088.%20Round%20Trip.cpp) |
+| 089 |  Monsters | [089. Monsters.cpp](Graph%20Algorithms/089.%20Monsters.cpp) |
+| 090 |  Shortest Routes I | [090. Shortest Routes I.cpp](Graph%20Algorithms/090.%20Shortest%20Routes%20I.cpp) |
+| 091 |  Shortest Routes II | [091. Shortest Routes II.cpp](Graph%20Algorithms/091.%20Shortest%20Routes%20II.cpp) |
+| 092 |  High Score | [092. High Score.cpp](Graph%20Algorithms/092.%20High%20Score.cpp) |
+| 093 |  Flight Discount | [093. Flight Discount.cpp](Graph%20Algorithms/093.%20Flight%20Discount.cpp) |
+| 094 |  Cycle Finding | [094. Cycle Finding.cpp](Graph%20Algorithms/094.%20Cycle%20Finding.cpp) |
+| 095 |  Flight Routes | [095. Flight Routes.cpp](Graph%20Algorithms/095.%20Flight%20Routes.cpp) |
+| 096 |  Round Trip II | [096. Round Trip II.cpp](Graph%20Algorithms/096.%20Round%20Trip%20II.cpp) |
+| 097 |  Course Schedule | [097. Course Schedule.cpp](Graph%20Algorithms/097.%20Course%20Schedule.cpp) |
+| 098 |  Longest Flight Route | [098. Longest Flight Route.cpp](Graph%20Algorithms/098.%20Longest%20Flight%20Route.cpp) |
+| 099 |  Game Routes | [099. Game Routes.cpp](Graph%20Algorithms/099.%20Game%20Routes.cpp) |
+| 100 |  Investigation | [100. Investigation.cpp](Graph%20Algorithms/100.%20Investigation.cpp) |
