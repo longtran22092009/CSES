@@ -78,7 +78,7 @@ void solve() {
     FOR(i, 0, n-1) {
         int id = coords[a[i]];
         // dp[i] = 1 (only a[i]) + sum(dp[j])
-        ll cnt = 1 + bit.query(id - 1); // bit[1..id-1]: strictly smaller
+        ll cnt = 1 + bit.query(id - 1); // sum(1..i-1)
         bit.update(id, cnt);
         ans = (ans + cnt) % MOD;
     }
