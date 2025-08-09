@@ -25,42 +25,51 @@ using namespace std;
 #define DEBUG "debug.out"
 //==================//
 
-// De Bruijn Sequence problem
+// Maximum Cardinality Bipartite Matching (MCBM)
 const int INF = (int) 1e9+5;
 const ll LINF = (ll) 1e18;
 const ll MOD = (ll) 1e9+7;
-const int mxN = 15;
+const int mxN = 100005;
 
-string ans;
-map <string, vector <char>> adj;
+int n, m, k;
+vector <int> adj[mxN], match(mxN, -1), getMatched(mxN, -1);
+// matchA[u]: the vertex that is matched from u
+// matchB[v]: the vertex that match to v
+bool vis[mxN];
 
-void dfs(string u) {
-    while (!adj[u].empty()) {
-        char ch = adj[u].back();
-        adj[u].pop_back();
-        dfs(u.substr(1) + ch);
-        ans += ch;
+bool Kuhn(int u) {
+    if (vis[u]) return false;
+    vis[u] = true;
+
+    for (auto &v : adj[u]) {
+        // v is not already matched
+        // Or can somehow match u with v
+        if (getMatched[v] == -1 || Kuhn(getMatched[v])) {
+            match[u] = v;
+            getMatched[v] = u;
+            return true;
+        }
     }
+    return false;
 }
 
 void solve() {
-    int n; cin >> n;
-
-    if (n == 1) {
-        cout << "10\n";
-        return;
-    }
-    
-    string start(n-1, '0');
-    FOR(i, 0, MASK(n-1)-1) {
-        string node = bitset<15>(i).to_string().substr(15 - (n-1));
-        adj[node].push_back('0');
-        adj[node].push_back('1');
+    cin >> n >> m >> k;
+    FOR(i, 1, k) {
+        int u, v; cin >> u >> v;
+        adj[u].push_back(v);
     }
 
-    dfs(start);
-    reverse(all(ans));
-    cout << start << ans << endl;
+    int ans = 0;
+    FOR(u, 1, n) {
+        fill(all(vis), false);
+        if (Kuhn(u)) ++ans;
+    }
+
+    cout << ans << endl;
+    FOR(u, 1, n)
+        if (match[u] != -1) // Matched to another vertex
+            cout << u << " " << match[u] << endl;
 }
 
 signed main() {

@@ -25,42 +25,59 @@ using namespace std;
 #define DEBUG "debug.out"
 //==================//
 
-// De Bruijn Sequence problem
+// Warnsdorff's Rule
 const int INF = (int) 1e9+5;
 const ll LINF = (ll) 1e18;
 const ll MOD = (ll) 1e9+7;
-const int mxN = 15;
+const int mxN = 8;
 
-string ans;
-map <string, vector <char>> adj;
+vector <int> dx = {-2, -2, 2, 2, -1, 1, -1, 1};
+vector <int> dy = {-1, 1, -1, 1, -2, -2, 2, 2};
+int a[mxN+1][mxN+1];
 
-void dfs(string u) {
-    while (!adj[u].empty()) {
-        char ch = adj[u].back();
-        adj[u].pop_back();
-        dfs(u.substr(1) + ch);
-        ans += ch;
+bool isBlocked(int x, int y) {
+    return (x < 1 || x > mxN || y < 1 || y > mxN || a[x][y]);
+}
+
+int calculateEmptyCells(int x, int y) {
+    int res = 0;
+    FOR(i, 0, 7) {
+        int nx = x + dx[i], ny = y + dy[i];
+        if (!isBlocked(nx, ny)) ++res;
     }
+    return res;
+}
+
+bool dfs(int x, int y, int step) {
+    a[x][y] = step;
+    if (step == 64) return true;
+
+    vector <array <int, 3>> choice;
+    FOR(i, 0, 7) {
+        int nx = x + dx[i], ny = y + dy[i];
+        if (!isBlocked(nx, ny)) {
+            int emptyCells = calculateEmptyCells(nx, ny);
+            choice.push_back({emptyCells, nx, ny});
+        }
+    }
+
+    // Choose the cell with less empty to-cells first
+    sort(all(choice)); 
+    for (auto &cell : choice)
+        if (dfs(cell[1], cell[2], step+1)) return true;
+    
+    a[x][y] = 0;
+    return false;
 }
 
 void solve() {
-    int n; cin >> n;
+    int x, y; cin >> y >> x;
+    dfs(x, y, 1);
 
-    if (n == 1) {
-        cout << "10\n";
-        return;
+    FOR(i, 1, mxN) {
+        FOR(j, 1, mxN) cout << a[i][j] << " ";
+        cout << endl;
     }
-    
-    string start(n-1, '0');
-    FOR(i, 0, MASK(n-1)-1) {
-        string node = bitset<15>(i).to_string().substr(15 - (n-1));
-        adj[node].push_back('0');
-        adj[node].push_back('1');
-    }
-
-    dfs(start);
-    reverse(all(ans));
-    cout << start << ans << endl;
 }
 
 signed main() {

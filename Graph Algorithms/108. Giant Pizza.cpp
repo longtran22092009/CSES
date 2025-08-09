@@ -25,6 +25,8 @@ using namespace std;
 #define DEBUG "debug.out"
 //==================//
 
+
+// 2-SAT problem (Boolean satisfiability)
 const int INF = (int) 1e9+5;
 const ll LINF = (ll) 1e18;
 const ll MOD = (ll) 1e9+7;

@@ -25,42 +25,40 @@ using namespace std;
 #define DEBUG "debug.out"
 //==================//
 
-// De Bruijn Sequence problem
 const int INF = (int) 1e9+5;
 const ll LINF = (ll) 1e18;
 const ll MOD = (ll) 1e9+7;
-const int mxN = 15;
+const int mxN = 21;
 
-string ans;
-map <string, vector <char>> adj;
-
-void dfs(string u) {
-    while (!adj[u].empty()) {
-        char ch = adj[u].back();
-        adj[u].pop_back();
-        dfs(u.substr(1) + ch);
-        ans += ch;
-    }
-}
+int n, m;
+vector <int> adj[mxN];
+ll dp[MASK(mxN)][mxN];
+// dp[mask][u]: # routes with bit 1 in mask is visited city and currently at city u 
 
 void solve() {
-    int n; cin >> n;
-
-    if (n == 1) {
-        cout << "10\n";
-        return;
-    }
-    
-    string start(n-1, '0');
-    FOR(i, 0, MASK(n-1)-1) {
-        string node = bitset<15>(i).to_string().substr(15 - (n-1));
-        adj[node].push_back('0');
-        adj[node].push_back('1');
+    cin >> n >> m;
+    FOR(i, 1, m) {
+        int u, v; cin >> u >> v;
+        --u, --v; // 0-based
+        adj[u].push_back(v);
     }
 
-    dfs(start);
-    reverse(all(ans));
-    cout << start << ans << endl;
+    dp[1][0] = 1; // Start from city 1
+    FOR(mask, 1, MASK(n)-1) {
+        // visit other city before city 1
+        if (!BIT(mask, 0)) continue; 
+        // visit city n before other city
+        if (BIT(mask, n-1) && mask != MASK(n-1)) continue; 
+
+        FOR(u, 0, n-1) if (BIT(mask, u)) { // vis[u]
+            for (auto &v : adj[u]) if (!BIT(mask, v)) { // !vis[v]
+                int nxt = ON(mask, v);
+                dp[nxt][v] = (dp[nxt][v] + dp[mask][u]) % MOD;
+            }
+        }
+    }
+
+    cout << dp[MASK(n)-1][n-1] << endl;
 }
 
 signed main() {

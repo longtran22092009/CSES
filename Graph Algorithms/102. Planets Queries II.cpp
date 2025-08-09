@@ -30,6 +30,7 @@ const ll LINF = (ll) 1e18;
 const ll MOD = (ll) 1e9+7;
 const int mxN = 200005;
 
+// Funtional graph problem (each node has only one outdegree)
 const int LOG = 31;
 int n, Q;
 int up[mxN][LOG], depth[mxN], comp[mxN];

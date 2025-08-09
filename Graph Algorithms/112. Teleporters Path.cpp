@@ -25,42 +25,65 @@ using namespace std;
 #define DEBUG "debug.out"
 //==================//
 
-// De Bruijn Sequence problem
+// Eulerian path problem
 const int INF = (int) 1e9+5;
 const ll LINF = (ll) 1e18;
 const ll MOD = (ll) 1e9+7;
-const int mxN = 15;
+const int mxN = 200005;
 
-string ans;
-map <string, vector <char>> adj;
+int n, m;
+vector <int> adj[mxN], in(mxN), out(mxN), path;
 
-void dfs(string u) {
-    while (!adj[u].empty()) {
-        char ch = adj[u].back();
-        adj[u].pop_back();
-        dfs(u.substr(1) + ch);
-        ans += ch;
+bool isEulerianPath() {
+    int stNode = 0, edNode = 0;
+    FOR(i, 1, n) {
+        if (abs(in[i] - out[i]) > 1) return false;
+        else if (in[i] - out[i] == 1) ++stNode;
+        else if (out[i] - in[i] == 1) ++edNode;
     }
+
+    // 1. All nodes have the equal in/out degree
+    // 2. One stNode, edNode and other nodes have the equal in/out degree
+    if ((!stNode && !edNode) || (stNode == 1 && edNode == 1)) return true;
+    return false;
+}
+
+void dfs(int u) {
+    while (!adj[u].empty()) {
+        int node = adj[u].back();
+        adj[u].pop_back();
+        dfs(node);
+    }
+    path.push_back(u);
 }
 
 void solve() {
-    int n; cin >> n;
-
-    if (n == 1) {
-        cout << "10\n";
-        return;
+    cin >> n >> m;
+    FOR(i, 1, m) {
+        int u, v; cin >> u >> v;
+        adj[u].push_back(v);
+        ++out[u];
+        ++in[v];
     }
     
-    string start(n-1, '0');
-    FOR(i, 0, MASK(n-1)-1) {
-        string node = bitset<15>(i).to_string().substr(15 - (n-1));
-        adj[node].push_back('0');
-        adj[node].push_back('1');
+    // Start at 1, end at n
+    bool isStart1 = (out[1] - in[1] == 1);
+    bool isEndN = (in[n] - out[n] == 1);
+    
+    // Check if the Eulerian path is exists
+    if (!isEulerianPath() || !isStart1 || !isEndN) {
+        cout << "IMPOSSIBLE\n";
+        return;
     }
 
-    dfs(start);
-    reverse(all(ans));
-    cout << start << ans << endl;
+    dfs(1);
+
+    // Check for disconnected graph
+    if (sz(path) == m+1) {
+        reverse(all(path));
+        for (auto &x : path) cout << x << " ";
+    }
+    else cout << "IMPOSSIBLE\n";
 }
 
 signed main() {

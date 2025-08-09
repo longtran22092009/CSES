@@ -25,48 +25,70 @@ using namespace std;
 #define DEBUG "debug.out"
 //==================//
 
-// Eulerian cycle problem
+// Max-flow problem
 const int INF = (int) 1e9+5;
 const ll LINF = (ll) 1e18;
 const ll MOD = (ll) 1e9+7;
-const int mxN = 200005;
+const int mxN = 505;
 
 int n, m;
-vector <pair <int, int>> adj[mxN];
-vector <int> deg(mxN, 0), path;
-bool usedEdge[mxN];
+vector <int> adj[mxN], par(mxN, -1);
+ll capacity[mxN][mxN];
 
-void dfs(int u) {
-    while (!adj[u].empty()) {
-        pair <int, int> x = adj[u].back();
-        adj[u].pop_back();
+ll bfs(int s, int t) {
+    fill(all(par), -1);
+    par[s] = -2;
 
-        if (usedEdge[x.se]) continue;
-        usedEdge[x.se] = true;
-        dfs(x.fi);
+    queue <pair <int, ll>> q;
+    q.push({s, LINF});
+
+    while (!q.empty()) {
+        int u = q.front().fi;
+        ll currFlow = q.front().se;
+        q.pop();
+
+        if (u == t) return currFlow;
+        for (auto &v : adj[u]) {
+            if (par[v] == -1 && capacity[u][v] > 0) {
+                ll newFlow = min(currFlow, capacity[u][v]);
+                par[v] = u;
+                q.push({v, newFlow});
+            }
+        }
     }
-    path.push_back(u);
+
+    return 0;
+}
+
+ll maxFlow(int s, int t) {
+    ll totalFlow = 0;
+    ll newFlow = 0;
+
+    while ((newFlow = bfs(s, t))) {
+        totalFlow += newFlow;
+        int curr = t;
+        while (curr != s) {
+            int pre = par[curr];
+            capacity[pre][curr] -= newFlow;
+            capacity[curr][pre] += newFlow;
+            curr = pre;
+        }
+    }
+
+    return totalFlow;
 }
 
 void solve() {
     cin >> n >> m;
     FOR(i, 1, m) {
-        int u, v; cin >> u >> v;
-        adj[u].push_back({v, i});
-        adj[v].push_back({u, i});
-        ++deg[u];
-        ++deg[v];
+        int u, v, w; cin >> u >> v >> w;
+        adj[u].push_back(v);
+        adj[v].push_back(u); // Residual edges
+        capacity[u][v] += w;
     }
 
-    FOR(i, 1, n) if (deg[i] & 1) {
-        cout << "IMPOSSIBLE\n";
-        return;
-    }
-
-    dfs(1);
-
-    if (sz(path) != m+1) cout << "IMPOSSIBLE\n";
-    else for (auto &x : path) cout << x << " ";
+    ll ans = maxFlow(1, n);
+    cout << ans << endl;
 }
 
 signed main() {
