@@ -119,3 +119,21 @@
 | 098 |  Longest Flight Route | [098. Longest Flight Route.cpp](Graph%20Algorithms/098.%20Longest%20Flight%20Route.cpp) |
 | 099 |  Game Routes | [099. Game Routes.cpp](Graph%20Algorithms/099.%20Game%20Routes.cpp) |
 | 100 |  Investigation | [100. Investigation.cpp](Graph%20Algorithms/100.%20Investigation.cpp) |
+| 101 |  Planets Queries I | [101. Planets Queries I.cpp](Graph%20Algorithms/101.%20Planets%20Queries%20I.cpp) |
+| 102 |  Planets Queries II | [102. Planets Queries II.cpp](Graph%20Algorithms/102.%20Planets%20Queries%20II.cpp) |
+| 103 |  Planets Cycles | [103. Planets Cycles.cpp](Graph%20Algorithms/103.%20Planets%20Cycles.cpp) |
+| 104 |  Road Reparation | [104. Road Reparation.cpp](Graph%20Algorithms/104.%20Road%20Reparation.cpp) |
+| 105 |  Road Construction | [105. Road Construction.cpp](Graph%20Algorithms/105.%20Road%20Construction.cpp) |
+| 106 |  Flight Routes Check | [106. Flight Routes Check.cpp](Graph%20Algorithms/106.%20Flight%20Routes%20Check.cpp) |
+| 107 |  Planets and Kingdoms | [107. Planets and Kingdoms.cpp](Graph%20Algorithms/107.%20Planets%20and%20Kingdoms.cpp) |
+| 108 |  Giant Pizza | [108. Giant Pizza.cpp](Graph%20Algorithms/108.%20Giant%20Pizza.cpp) |
+| 109 |  Coin Collector | [109. Coin Collector.cpp](Graph%20Algorithms/109.%20Coin%20Collector.cpp) |
+| 110 |  Mail Delivery | [110. Mail Delivery.cpp](Graph%20Algorithms/110.%20Mail%20Delivery.cpp) |
+| 111 |  De Bruijn Sequence | [111. De Bruijn Sequence.cpp](Graph%20Algorithms/111.%20De%20Bruijn%20Sequence.cpp) |
+| 112 |  Teleporters Path | [112. Teleporters Path.cpp](Graph%20Algorithms/112.%20Teleporters%20Path.cpp) |
+| 113 |  Hamiltonian Flights | [113. Hamiltonian Flights.cpp](Graph%20Algorithms/113.%20Hamiltonian%20Flights.cpp) |
+| 114 |  Knight's Tour | [114. Knight's Tour.cpp](Graph%20Algorithms/114.%20Knight's%20Tour.cpp) |
+| 115 |  Download Speed | [115. Download Speed.cpp](Graph%20Algorithms/115.%20Download%20Speed.cpp) |
+| 116 |  Police Chase | [116. Police Chase.cpp](Graph%20Algorithms/116.%20Police%20Chase.cpp) |
+| 117 |  School Dance | [117. School Dance.cpp](Graph%20Algorithms/117.%20School%20Dance.cpp) |
+| 118 |  Distinct Routes | [118. Distinct Routes.cpp](Graph%20Algorithms/118.%20Distinct%20Routes.cpp) |
