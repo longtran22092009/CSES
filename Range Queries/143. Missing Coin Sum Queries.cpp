@@ -30,10 +30,11 @@ const ll LINF = (ll) 1e18;
 const ll MOD = (ll) 1e9+7;
 const int mxN = 5000005;
 
+int Lc[mxN], Rc[mxN];
+ll sum[mxN];
+
 struct segtree {
     int n, ptr;
-    static int Lc[mxN], Rc[mxN];
-    static ll sum[mxN];
 
     segtree(int _n) : n(_n), ptr(0) {}
 
@@ -77,10 +78,6 @@ struct segtree {
         return self(self, node, ql, qr, 1, n+1);
     }
 };
-
-int segtree::Lc[mxN];
-int segtree::Rc[mxN];
-ll segtree::sum[mxN];
 
 void solve() {
     /*
