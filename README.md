@@ -137,3 +137,33 @@
 | 116 |  Police Chase | [116. Police Chase.cpp](Graph%20Algorithms/116.%20Police%20Chase.cpp) |
 | 117 |  School Dance | [117. School Dance.cpp](Graph%20Algorithms/117.%20School%20Dance.cpp) |
 | 118 |  Distinct Routes | [118. Distinct Routes.cpp](Graph%20Algorithms/118.%20Distinct%20Routes.cpp) |
+
+## 🔹 Range Queries
+
+| ID  | Problem Name | File Link |
+|-----|--------------|-----------|
+| 119 |  Static Range Sum Queries | [119. Static Range Sum Queries.cpp](Range%20Queries/119.%20Static%20Range%20Sum%20Queries.cpp) |
+| 120 |  Static Range Minimum Queries | [120. Static Range Minimum Queries.cpp](Range%20Queries/120.%20Static%20Range%20Minimum%20Queries.cpp) |
+| 121 |  Dynamic Range Sum Queries | [121. Dynamic Range Sum Queries.cpp](Range%20Queries/121.%20Dynamic%20Range%20Sum%20Queries.cpp) |
+| 122 |  Dynamic Range Minimum Queries | [122. Dynamic Range Minimum Queries.cpp](Range%20Queries/122.%20Dynamic%20Range%20Minimum%20Queries.cpp) |
+| 123 |  Range Xor Queries | [123. Range Xor Queries.cpp](Range%20Queries/123.%20Range%20Xor%20Queries.cpp) |
+| 124 |  Range Update Queries | [124. Range Update Queries.cpp](Range%20Queries/124.%20Range%20Update%20Queries.cpp) |
+| 125 |  Forest Queries | [125. Forest Queries.cpp](Range%20Queries/125.%20Forest%20Queries.cpp) |
+| 126 |  Hotel Queries | [126. Hotel Queries.cpp](Range%20Queries/126.%20Hotel%20Queries.cpp) |
+| 127 |  List Removals | [127. List Removals.cpp](Range%20Queries/127.%20List%20Removals.cpp) |
+| 128 |  Salary Queries | [128. Salary Queries.cpp](Range%20Queries/128.%20Salary%20Queries.cpp) |
+| 129 |  Prefix Sum Queries | [129. Prefix Sum Queries.cpp](Range%20Queries/129.%20Prefix%20Sum%20Queries.cpp) |
+| 130 |  Pizzeria Queries | [130. Pizzeria Queries.cpp](Range%20Queries/130.%20Pizzeria%20Queries.cpp) |
+| 131 |  Visible Buildings Queries | [131. Visible Buildings Queries.cpp](Range%20Queries/131.%20Visible%20Buildings%20Queries.cpp) |
+| 132 |  Range Interval Queries | [132. Range Interval Queries.cpp](Range%20Queries/132.%20Range%20Interval%20Queries.cpp) |
+| 133 |  Subarray Sum Queries | [133. Subarray Sum Queries.cpp](Range%20Queries/133.%20Subarray%20Sum%20Queries.cpp) |
+| 134 |  Subarray Sum Queries II | [134. Subarray Sum Queries II.cpp](Range%20Queries/134.%20Subarray%20Sum%20Queries%20II.cpp) |
+| 135 |  Distinct Values Queries | [135. Distinct Values Queries.cpp](Range%20Queries/135.%20Distinct%20Values%20Queries.cpp) |
+| 136 |  Distinct Values Queries II | [136. Distinct Values Queries II.cpp](Range%20Queries/136.%20Distinct%20Values%20Queries%20II.cpp) |
+| 137 |  Increasing Array Queries | [137. Increasing Array Queries.cpp](Range%20Queries/137.%20Increasing%20Array%20Queries.cpp) |
+| 138 |  Movie Festival Queries | [138. Movie Festival Queries.cpp](Range%20Queries/138.%20Movie%20Festival%20Queries.cpp) |
+| 139 |  Forest Queries II | [139. Forest Queries II.cpp](Range%20Queries/139.%20Forest%20Queries%20II.cpp) |
+| 140 |  Range Updates and Sums | [140. Range Updates and Sums.cpp](Range%20Queries/140.%20Range%20Updates%20and%20Sums.cpp) |
+| 141 |  Polynomial Queries | [141. Polynomial Queries.cpp](Range%20Queries/141.%20Polynomial%20Queries.cpp) |
+| 142 |  Range Queries and Copies | [142. Range Queries and Copies.cpp](Range%20Queries/142.%20Range%20Queries%20and%20Copies.cpp) |
+| 143 |  Missing Coin Sum Queries | [143. Missing Coin Sum Queries.cpp](Range%20Queries/143.%20Missing%20Coin%20Sum%20Queries.cpp) |
