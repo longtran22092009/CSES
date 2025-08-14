@@ -32,16 +32,10 @@ const int mxN = 5000005;
 
 struct segtree {
     int n, ptr;
-    vector <int> Lc, Rc;
-    vector <ll> sum;
+    static int Lc[mxN], Rc[mxN];
+    static ll sum[mxN];
 
-    segtree(int _n) {
-        n = _n;
-        ptr = 0;
-        sum.assign(mxN, 0LL);
-        Lc.assign(mxN, 0LL);
-        Rc.assign(mxN, 0LL);
-    }
+    segtree(int _n) : n(_n), ptr(0) {}
 
     int makeNode(ll val, int L, int R) {
         int id = ++ptr;
@@ -83,6 +77,10 @@ struct segtree {
         return self(self, node, ql, qr, 1, n+1);
     }
 };
+
+int segtree::Lc[mxN];
+int segtree::Rc[mxN];
+ll segtree::sum[mxN];
 
 void solve() {
     /*
