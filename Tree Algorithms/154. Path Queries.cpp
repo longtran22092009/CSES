@@ -30,37 +30,41 @@ const ll LINF = (ll) 1e18;
 const ll MOD = (ll) 1e9+7;
 const int mxN = (int) 2e5+5;
 
-const int LOG = 31;
-vector <int> adj[mxN], depth(mxN, 0);
-int up[mxN][LOG];
+struct Fenwick {
+    int n;
+    vector <ll> bit;
+
+    Fenwick(int _n) {
+        n = _n;
+        bit.assign(n+1, 0LL);
+    }
+
+    void update(int idx, ll val) {
+        for (; idx <= n; idx += LASTBIT(idx)) bit[idx] += val;
+    }
+
+    ll query(int idx) {
+        ll sum = 0;
+        for (; idx > 0; idx -= LASTBIT(idx)) sum += bit[idx];
+        return sum;
+    }
+};
+
+int n, Q, timeDfs = 0;
+vector <int> adj[mxN], tin(mxN), tout(mxN);
 
 void dfs(int u, int pre) {
-    for (auto &v : adj[u]) {
-        if (v == pre) continue;
-
-        up[v][0] = u;
-        depth[v] = depth[u] + 1;
-        FOR(j, 1, LOG-1) 
-            up[v][j] = up[up[v][j-1]][j-1];
-        dfs(v, u);
-    }
-}
-
-int LCA(int a, int b) {
-    if (depth[a] != depth[b]) {
-        if (depth[a] < depth[b]) swap(a, b);
-        int k = depth[a] - depth[b];
-        FORD(j, LOG-1, 0) if (BIT(k, j)) a = up[a][j];
-    }
-    if (a == b) return a;
-
-    FORD(j, LOG-1, 0) if (up[a][j] != up[b][j])
-        a = up[a][j], b = up[b][j];
-    return up[a][0];
+    tin[u] = ++timeDfs;
+    for (auto &v : adj[u])
+        if (v != pre) dfs(v, u);
+    tout[u] = timeDfs;
 }
 
 void solve() {
-    int n, Q; cin >> n >> Q;
+    cin >> n >> Q;
+
+    vector <ll> a(n+1);
+    FOR(i, 1, n) cin >> a[i];
 
     FOR(i, 1, n-1) {
         int u, v; cin >> u >> v;
@@ -69,9 +73,26 @@ void solve() {
     }
 
     dfs(1, 0);
+    Fenwick bit(n);
+    FOR(i, 1, n) {
+        bit.update(tin[i], a[i]);
+        bit.update(tout[i]+1, -a[i]);
+    }
+
     while (Q--) {
-        int u, v; cin >> u >> v;
-        cout << depth[u] + depth[v] - 2 * depth[LCA(u, v)] << endl;
+        int op; cin >> op;
+
+        if (op == 1) {
+            int p; ll v; cin >> p >> v;
+            ll delta = v - a[p];
+            bit.update(tin[p], delta);
+            bit.update(tout[p]+1, -delta);
+            a[p] = v;
+        }
+        else {
+            int u; cin >> u;
+            cout << bit.query(tin[u]) << endl;
+        }
     }
 }
 

@@ -70,7 +70,7 @@ void solve() {
     cin >> n >> Q;
     FOR(i, 1, n) cin >> a[i];
 
-    FOR(i, 2, n) {
+    FOR(i, 1, n-1) {
         int u, v; cin >> u >> v;
         adj[u].push_back(v);
         adj[v].push_back(u);

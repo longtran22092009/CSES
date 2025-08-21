@@ -69,7 +69,7 @@ void calculate(int u, int pre) {
 void solve() {
     int n, m; cin >> n >> m;
 
-    FOR(i, 2, n) {
+    FOR(i, 1, n-1) {
         int u, v; cin >> u >> v;
         adj[u].push_back(v);
         adj[v].push_back(u);

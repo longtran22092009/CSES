@@ -30,37 +30,33 @@ const ll LINF = (ll) 1e18;
 const ll MOD = (ll) 1e9+7;
 const int mxN = (int) 2e5+5;
 
-const int LOG = 31;
-vector <int> adj[mxN], depth(mxN, 0);
-int up[mxN][LOG];
+int n;
+vector <int> adj[mxN], color(mxN), ans(mxN);
+vector <set <int>> tree(mxN);
 
 void dfs(int u, int pre) {
+    int big = -1;
     for (auto &v : adj[u]) {
         if (v == pre) continue;
-
-        up[v][0] = u;
-        depth[v] = depth[u] + 1;
-        FOR(j, 1, LOG-1) 
-            up[v][j] = up[up[v][j-1]][j-1];
         dfs(v, u);
+        // Find the biggest set of color
+        if (big == -1 || sz(tree[big]) < sz(tree[v])) big = v;
     }
-}
 
-int LCA(int a, int b) {
-    if (depth[a] != depth[b]) {
-        if (depth[a] < depth[b]) swap(a, b);
-        int k = depth[a] - depth[b];
-        FORD(j, LOG-1, 0) if (BIT(k, j)) a = up[a][j];
+    if (big != -1) swap(tree[u], tree[big]);
+    tree[u].insert(color[u]);
+    for (auto &v : adj[u]) {
+        if (v == pre || v == big) continue;
+        tree[u].insert(all(tree[v]));
     }
-    if (a == b) return a;
 
-    FORD(j, LOG-1, 0) if (up[a][j] != up[b][j])
-        a = up[a][j], b = up[b][j];
-    return up[a][0];
+    ans[u] = sz(tree[u]);
 }
 
 void solve() {
-    int n, Q; cin >> n >> Q;
+    cin >> n;
+
+    FOR(i, 1, n) cin >> color[i];
 
     FOR(i, 1, n-1) {
         int u, v; cin >> u >> v;
@@ -69,10 +65,7 @@ void solve() {
     }
 
     dfs(1, 0);
-    while (Q--) {
-        int u, v; cin >> u >> v;
-        cout << depth[u] + depth[v] - 2 * depth[LCA(u, v)] << endl;
-    }
+    FOR(i, 1, n) cout << ans[i] << " ";
 }
 
 signed main() {
