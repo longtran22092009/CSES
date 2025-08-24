@@ -167,3 +167,24 @@
 | 141 |  Polynomial Queries | [141. Polynomial Queries.cpp](Range%20Queries/141.%20Polynomial%20Queries.cpp) |
 | 142 |  Range Queries and Copies | [142. Range Queries and Copies.cpp](Range%20Queries/142.%20Range%20Queries%20and%20Copies.cpp) |
 | 143 |  Missing Coin Sum Queries | [143. Missing Coin Sum Queries.cpp](Range%20Queries/143.%20Missing%20Coin%20Sum%20Queries.cpp) |
+
+## 🔹 Tree Algorithms
+
+| ID  | Problem Name | File Link |
+|-----|--------------|-----------|
+| 144 |  Subordinates | [144. Subordinates.cpp](Tree%20Algorithms/144.%20Subordinates.cpp) |
+| 145 |  Tree Matching | [145. Tree Matching.cpp](Tree%20Algorithms/145.%20Tree%20Matching.cpp) |
+| 146 |  Tree Diameter | [146. Tree Diameter.cpp](Tree%20Algorithms/146.%20Tree%20Diameter.cpp) |
+| 147 |  Tree Distances I | [147. Tree Distances I.cpp](Tree%20Algorithms/147.%20Tree%20Distances%20I.cpp) |
+| 148 |  Tree Distances II | [148. Tree Distances II.cpp](Tree%20Algorithms/148.%20Tree%20Distances%20II.cpp) |
+| 149 |  Company Queries I | [149. Company Queries I.cpp](Tree%20Algorithms/149.%20Company%20Queries%20I.cpp) |
+| 150 |  Company Queries II | [150. Company Queries II.cpp](Tree%20Algorithms/150.%20Company%20Queries%20II.cpp) |
+| 151 |  Distance Queries | [151. Distance Queries.cpp](Tree%20Algorithms/151.%20Distance%20Queries.cpp) |
+| 152 |  Counting Paths | [152. Counting Paths.cpp](Tree%20Algorithms/152.%20Counting%20Paths.cpp) |
+| 153 |  Subtree Queries | [153. Subtree Queries.cpp](Tree%20Algorithms/153.%20Subtree%20Queries.cpp) |
+| 154 |  Path Queries | [154. Path Queries.cpp](Tree%20Algorithms/154.%20Path%20Queries.cpp) |
+| 155 |  Path Queries II | [155. Path Queries II.cpp](Tree%20Algorithms/155.%20Path%20Queries%20II.cpp) |
+| 156 |  Distinct Colors | [156. Distinct Colors.cpp](Tree%20Algorithms/156.%20Distinct%20Colors.cpp) |
+| 157 |  Finding a Centroid | [157. Finding a Centroid.cpp](Tree%20Algorithms/157.%20Finding%20a%20Centroid.cpp) |
+| 158 |  Fixed-Length Paths I | [158. Fixed-Length Paths I.cpp](Tree%20Algorithms/158.%20Fixed-Length%20Paths%20I.cpp) |
+| 159 |  Fixed-Length Paths II | [159. Fixed-Length Paths II.cpp](Tree%20Algorithms/159.%20Fixed-Length%20Paths%20II.cpp) |
